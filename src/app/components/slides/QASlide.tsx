@@ -77,7 +77,8 @@ export default function QASlide() {
             {/* Social Links */}
             <div className="flex justify-center gap-4 mt-8">
               <a
-                href="#"
+                href="mailto:zubair@dexic.tech"
+                target='_blank'
                 className={`p-4 rounded-xl ${
                   isDark ? 'bg-gray-900' : 'bg-white'
                 } border ${
@@ -88,7 +89,8 @@ export default function QASlide() {
                 <Mail className="w-6 h-6 text-[#02569B]" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/zubair.n31/"
+                target='_blank'
                 className={`p-4 rounded-xl ${
                   isDark ? 'bg-gray-900' : 'bg-white'
                 } border ${
@@ -99,7 +101,8 @@ export default function QASlide() {
                 <Instagram className="w-6 h-6 text-[#02569B]" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/zubairn31/"
+                target='_blank'
                 className={`p-4 rounded-xl ${
                   isDark ? 'bg-gray-900' : 'bg-white'
                 } border ${
@@ -110,7 +113,8 @@ export default function QASlide() {
                 <Linkedin className="w-6 h-6 text-[#02569B]" />
               </a>
               <a
-                href="#"
+                href="https://github.com/MZubairNaeem"
+                target='_blank'
                 className={`p-4 rounded-xl ${
                   isDark ? 'bg-gray-900' : 'bg-white'
                 } border ${
