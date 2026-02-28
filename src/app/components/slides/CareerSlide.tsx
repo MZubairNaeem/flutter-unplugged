@@ -166,7 +166,7 @@ export default function CareerSlide() {
             <div className="flex items-center gap-3 mb-6">
               <Globe className="w-8 h-8 text-[#02569B]" />
               <h2 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                Who's Hiring
+                Who's Alread Hired Flutter Developers?
               </h2>
             </div>
             <div
