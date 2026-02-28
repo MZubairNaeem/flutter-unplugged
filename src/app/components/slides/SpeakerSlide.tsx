@@ -10,42 +10,48 @@ export default function SpeakerSlide() {
       title: 'Backend Engineering Lead',
       company: 'RippleBerry Tech',
       icon: Briefcase,
+      website: 'https://rippleberry.net',
     },
     {
       image: 'https://woofy-prod.s3.ap-southeast-1.amazonaws.com/website/woofy.svg',
       title: 'CTO',
       company: 'Woofy',
       icon: Code2,
+      website: 'https://woofy.dexic.tech',
     },
   ];
   const technologies = [
-
     {
       name: 'Flutter',
       image: 'https://img.icons8.com/color/48/flutter.png',
+      website: 'https://flutter.dev',
     },
     {
       name: 'Vue',
       image: 'https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-vuejs-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-applications-logo-color-tal-revivo.png',
+      website: 'https://vuejs.org', // ✅ fixed spelling + correct URL
     },
     {
       name: 'Nuxt',
       image: 'https://img.icons8.com/color/48/nuxt-jc.png',
+      website: 'https://nuxt.com',
     },
     {
       name: 'Laravel',
       image: 'https://img.icons8.com/fluency/48/laravel.png',
+      website: 'https://laravel.com',
     },
     {
       name: 'Nest',
       image: 'https://img.icons8.com/color/48/nestjs.png',
+      website: 'https://nestjs.com',
     },
     {
       name: 'Express',
       image: 'https://img.icons8.com/color/48/express-js.png',
+      website: 'https://expressjs.com',
     },
   ];
-
   return (
     <div className="h-full flex items-center justify-center p-8">
       <div className="max-w-5xl w-full">
@@ -109,33 +115,40 @@ export default function SpeakerSlide() {
                 Current Roles
               </h3>
               {roles.map((role, index) => (
-                <div
+                <a
                   key={index}
-                  className={`p-5 rounded-xl ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'
-                    } border ${isDark ? 'border-gray-700' : 'border-gray-200'
-                    } hover:border-[#02569B] transition-all group`}
+                  href={role.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`p-3 rounded-lg ${isDark ? 'bg-gray-900' : 'bg-white'
-                        } group-hover:bg-[#02569B]/10 transition-colors`}
-                    >
-                      <img
-                        src={role.image}
-                        alt="Zubair Naeem"
-                        className="w-8 h-8 object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                        {role.title}
-                      </h4>
-                      <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        {role.company}
-                      </p>
+                  <div
+                    className={`p-5 rounded-xl ${isDark ? 'bg-gray-800/50' : 'bg-gray-50'
+                      } border ${isDark ? 'border-gray-700' : 'border-gray-200'
+                      } hover:border-[#02569B] transition-all group cursor-pointer`}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div
+                        className={`p-3 rounded-lg ${isDark ? 'bg-gray-900' : 'bg-white'
+                          } group-hover:bg-[#02569B]/10 transition-colors`}
+                      >
+                        <img
+                          src={role.image}
+                          alt={role.company}
+                          className="w-8 h-8 object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h4 className={`font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
+                          {role.title}
+                        </h4>
+                        <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                          {role.company}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
 
@@ -149,22 +162,29 @@ export default function SpeakerSlide() {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech, index) => (
-                  <span
+                  <a
                     key={index}
-                    className={`flex items-center gap-2 px-4 py-3 rounded-full text-sm font-medium ${isDark
-                      ? 'bg-gray-800 text-gray-300 border border-gray-700'
-                      : 'bg-white text-gray-700 border border-gray-300'
-                      } hover:border-[#02569B] hover:text-[#02569B] transition-all`}
+                    href={tech.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
                   >
-                    <img
-                      width="20"
-                      height="20"
-                      src={tech.image}
-                      alt={tech.name}
-                      className="object-contain"
-                    />
-                    {tech.name}
-                  </span>
+                    <span
+                      className={`flex items-center gap-2 px-4 py-3 rounded-full text-sm font-medium cursor-pointer ${isDark
+                          ? 'bg-gray-800 text-gray-300 border border-gray-700'
+                          : 'bg-white text-gray-700 border border-gray-300'
+                        } hover:border-[#02569B] hover:text-[#02569B] transition-all`}
+                    >
+                      <img
+                        width="20"
+                        height="20"
+                        src={tech.image}
+                        alt={tech.name}
+                        className="object-contain"
+                      />
+                      {tech.name}
+                    </span>
+                  </a>
                 ))}
               </div>
             </div>
