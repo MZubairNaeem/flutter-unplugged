@@ -6,13 +6,13 @@ export default function SpeakerSlide() {
 
   const roles = [
     {
-      image: 'public/rb.png',
+      image: 'https://woofy-prod.s3.ap-southeast-1.amazonaws.com/website/rb.png',
       title: 'Backend Engineering Lead',
       company: 'RippleBerry Tech',
       icon: Briefcase,
     },
     {
-      image: 'public/woofy.svg',
+      image: 'https://woofy-prod.s3.ap-southeast-1.amazonaws.com/website/woofy.svg',
       title: 'CTO',
       company: 'Woofy',
       icon: Code2,

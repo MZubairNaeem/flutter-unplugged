@@ -137,7 +137,7 @@ export default function StartupSlide() {
                     } overflow-hidden shadow-2xl`}
                   >
                     <img
-                      src="public/screenshot.jpeg"
+                      src="https://woofy-prod.s3.ap-southeast-1.amazonaws.com/website/screenshot.jpeg"
                       alt="Mobile App Mockup"
                       className="w-full h-full object-cover"
                     />
